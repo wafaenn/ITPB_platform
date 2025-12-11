@@ -1,11 +1,11 @@
 ﻿namespace ITBS_Platform
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         ///  Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private System.ComponentModel.IContainer? components = null;
 
         /// <summary>
         ///  Clean up any resources being used.
@@ -98,7 +98,7 @@
             btnSignup.Text = "Créer un compte";
             btnSignup.LinkClicked += linkLabel1_LinkClicked;
             // 
-            // Form1
+            // LoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -110,9 +110,9 @@
             Controls.Add(addrs);
             Controls.Add(label1);
             Controls.Add(login);
-            Name = "Form1";
-            Text = "Form1";
-            Load += Form1_Load;
+            Name = "LoginForm";
+            Text = "LoginForm";
+            Load += Login_Load;
             ResumeLayout(false);
             PerformLayout();
         }

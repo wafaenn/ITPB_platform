@@ -4,3 +4,6 @@ obj/
 *.user
 *.log
 packages/
+#fichiers windows
+Thumbs.db
+Desktop.ini

@@ -21,13 +21,13 @@
             labelPassword = new Label();
             labelEmail = new Label();
             labelConfirm = new Label();
+            labelRole = new Label(); // ← NOUVEAU
             btnRegister = new Button();
-
             txtFullName = new TextBox();
             txtEmail = new TextBox();
             txtPassword = new TextBox();
             txtConfirmPassword = new TextBox();
-
+            cmbRole = new ComboBox(); // ← NOUVEAU
             SuspendLayout();
             // 
             // labelFullName
@@ -38,23 +38,29 @@
             labelFullName.Size = new Size(108, 20);
             labelFullName.Text = "Nom complet :";
             // 
-            // labelPassword
-            // 
-            labelPassword.AutoSize = true;
-            labelPassword.Location = new Point(39, 198);
-            labelPassword.Text = "Mot de passe :";
-            // 
             // labelEmail
             // 
             labelEmail.AutoSize = true;
             labelEmail.Location = new Point(39, 132);
             labelEmail.Text = "Email :";
             // 
+            // labelPassword
+            // 
+            labelPassword.AutoSize = true;
+            labelPassword.Location = new Point(39, 198);
+            labelPassword.Text = "Mot de passe :";
+            // 
             // labelConfirm
             // 
             labelConfirm.AutoSize = true;
             labelConfirm.Location = new Point(39, 273);
             labelConfirm.Text = "Confirmer :";
+            // 
+            // labelRole ← NOUVEAU
+            // 
+            labelRole.AutoSize = true;
+            labelRole.Location = new Point(39, 338);
+            labelRole.Text = "Rôle :";
             // 
             // txtFullName
             // 
@@ -78,9 +84,18 @@
             txtConfirmPassword.Size = new Size(304, 27);
             txtConfirmPassword.PasswordChar = '*';
             // 
+            // cmbRole ← NOUVEAU
+            // 
+            cmbRole.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbRole.FormattingEnabled = true;
+            cmbRole.Location = new Point(232, 335);
+            cmbRole.Name = "cmbRole";
+            cmbRole.Size = new Size(304, 28);
+            cmbRole.TabIndex = 9;
+            // 
             // btnRegister
             // 
-            btnRegister.Location = new Point(257, 351);
+            btnRegister.Location = new Point(257, 410);
             btnRegister.Size = new Size(224, 50);
             btnRegister.Text = "Créer un compte";
             btnRegister.Click += button1_Click;
@@ -88,22 +103,21 @@
             // SignupForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
-            ClientSize = new Size(800, 450);
-
+            ClientSize = new Size(800, 520);
             Controls.Add(labelFullName);
             Controls.Add(labelEmail);
             Controls.Add(labelPassword);
             Controls.Add(labelConfirm);
+            Controls.Add(labelRole); // ← NOUVEAU
             Controls.Add(txtFullName);
             Controls.Add(txtEmail);
             Controls.Add(txtPassword);
             Controls.Add(txtConfirmPassword);
+            Controls.Add(cmbRole); // ← NOUVEAU
             Controls.Add(btnRegister);
-
             Name = "SignupForm";
             Text = "Création de compte";
             Load += SignupForm_Load;
-
             ResumeLayout(false);
             PerformLayout();
         }
@@ -112,12 +126,12 @@
         private Label labelPassword;
         private Label labelEmail;
         private Label labelConfirm;
-
+        private Label labelRole; // ← NOUVEAU
         private TextBox txtFullName;
         private TextBox txtEmail;
         private TextBox txtPassword;
         private TextBox txtConfirmPassword;
-
+        private ComboBox cmbRole; // ← NOUVEAU
         private Button btnRegister;
 
         #endregion
