@@ -3,12 +3,12 @@
     partial class LoginForm
     {
         /// <summary>
-        ///  Required designer variable.
+        ///  Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer? components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        ///  Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,8 +23,8 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -71,7 +71,7 @@
             mddps.Name = "mddps";
             mddps.Size = new Size(109, 20);
             mddps.TabIndex = 3;
-            mddps.Text = "mot de passe  :";
+            mddps.Text = "mot de passe  :";
             // 
             // emailTxt
             // 
@@ -119,12 +119,13 @@
 
         #endregion
 
-        private Button login;
-        private Label label1;
-        private Label addrs;
-        private Label mddps;
-        private TextBox emailTxt;
-        private TextBox passwordTxt;
-        private LinkLabel btnSignup;
+        // Déclarations corrigées pour CS8618 avec l'opérateur 'null!'
+        private Button login = null!;
+        private Label label1 = null!;
+        private Label addrs = null!;
+        private Label mddps = null!;
+        private TextBox emailTxt = null!;
+        private TextBox passwordTxt = null!;
+        private LinkLabel btnSignup = null!;
     }
 }

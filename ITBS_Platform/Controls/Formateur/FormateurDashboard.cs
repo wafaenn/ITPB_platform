@@ -24,7 +24,7 @@ namespace ITBS_Platform.Controls.Formateur
                 Text = "Tableau de bord Formateur",
                 ForeColor = Color.White,
                 Font = new Font("Segoe UI", 28, FontStyle.Bold),
-                Location = new Point(40, 30),
+                Location = new Point(240, 30),
                 AutoSize = true
             };
             this.Controls.Add(titre);
@@ -36,38 +36,37 @@ namespace ITBS_Platform.Controls.Formateur
             int cardHeight = 140;
 
             // Carte 1 : Mes Formations
-            Panel card1 = CreerCarte("Mes Formations", "5", "📚", Color.FromArgb(52, 199, 89), 40, cardY, cardWidth, cardHeight);
+            Panel card1 = CreerCarte("Mes Formations", "5", "📚", Color.FromArgb(60, 60, 60), 250, cardY, cardWidth, cardHeight);
             this.Controls.Add(card1);
 
             // Carte 2 : Étudiants inscrits
-            Panel card2 = CreerCarte("Étudiants", "42", "👨‍🎓", Color.FromArgb(100, 88, 255), 40 + cardWidth + cardSpacing, cardY, cardWidth, cardHeight);
+            Panel card2 = CreerCarte("Étudiants", "42", "👨‍🎓", Color.FromArgb(100, 98, 25), 340 + cardWidth + cardSpacing, cardY, cardWidth, cardHeight);
             this.Controls.Add(card2);
 
             // Carte 3 : Formations actives
-            Panel card3 = CreerCarte("En cours", "3", "🎯", Color.FromArgb(255, 149, 0), 40 + (cardWidth + cardSpacing) * 2, cardY, cardWidth, cardHeight);
+            Panel card3 = CreerCarte("En cours", "3", "🎯", Color.FromArgb(255, 149, 0), 440 + (cardWidth + cardSpacing) * 2, cardY, cardWidth, cardHeight);
             this.Controls.Add(card3);
 
             // ========== ACTIONS RAPIDES ==========
             Label lblActions = new Label
             {
                 Text = "Actions rapides",
-                ForeColor = Color.White,
+                ForeColor = Color.Lavender,
                 Font = new Font("Segoe UI", 20, FontStyle.Bold),
-                Location = new Point(40, 270),
+                Location = new Point(280, 270),
                 AutoSize = true
             };
             this.Controls.Add(lblActions);
-
-            Button btnCreerFormation = CreerBoutonAction("➕ Créer une nouvelle formation", 40, 320);
-            btnCreerFormation.Click += (s, e) => MessageBox.Show("Redirection vers création de formation");
+            Button btnCreerFormation = CreerBoutonAction("➕ Créer une nouvelle formation", 240, 320);
+            btnCreerFormation.Click += (s, e) => NaviguerVers(new CreerFormation());
             this.Controls.Add(btnCreerFormation);
 
-            Button btnVoirEtudiants = CreerBoutonAction("👥 Voir mes étudiants", 380, 320);
-            btnVoirEtudiants.Click += (s, e) => MessageBox.Show("Redirection vers liste des étudiants");
+            Button btnVoirEtudiants = CreerBoutonAction("👥 Voir mes étudiants", 580, 320);
+            btnVoirEtudiants.Click += (s, e) => NaviguerVers(new VoirEtudiants());
             this.Controls.Add(btnVoirEtudiants);
 
-            Button btnModifierFormation = CreerBoutonAction("✏️ Modifier une formation", 720, 320);
-            btnModifierFormation.Click += (s, e) => MessageBox.Show("Redirection vers modification formation");
+            Button btnModifierFormation = CreerBoutonAction("✏️ Modifier une formation", 920, 320);
+            btnModifierFormation.Click += (s, e) => NaviguerVers(new ModifierFormation());
             this.Controls.Add(btnModifierFormation);
 
             // ========== MES FORMATIONS ==========
@@ -76,7 +75,7 @@ namespace ITBS_Platform.Controls.Formateur
                 Text = "Mes formations",
                 ForeColor = Color.White,
                 Font = new Font("Segoe UI", 20, FontStyle.Bold),
-                Location = new Point(40, 420),
+                Location = new Point(300, 420),
                 AutoSize = true
             };
             this.Controls.Add(lblFormations);
@@ -84,8 +83,8 @@ namespace ITBS_Platform.Controls.Formateur
             // Liste des formations (exemple)
             Panel panelFormations = new Panel
             {
-                Location = new Point(40, 470),
-                Size = new Size(1000, 250),
+                Location = new Point(300, 470),
+                Size = new Size(1400, 250),
                 BackColor = Color.FromArgb(28, 28, 42),
                 AutoScroll = true
             };
@@ -121,7 +120,7 @@ namespace ITBS_Platform.Controls.Formateur
             Label lblEmoji = new Label
             {
                 Text = emoji,
-                Font = new Font("Segoe UI", 32),
+                Font = new Font("Segoe UI", 26),
                 ForeColor = Color.White,
                 Location = new Point(15, 15),
                 AutoSize = true
@@ -133,7 +132,7 @@ namespace ITBS_Platform.Controls.Formateur
                 Text = valeur,
                 Font = new Font("Segoe UI", 32, FontStyle.Bold),
                 ForeColor = Color.White,
-                Location = new Point(15, 60),
+                Location = new Point(190, 15),
                 AutoSize = true
             };
             carte.Controls.Add(lblValeur);
@@ -141,7 +140,7 @@ namespace ITBS_Platform.Controls.Formateur
             Label lblTitre = new Label
             {
                 Text = titre,
-                Font = new Font("Segoe UI", 12),
+                Font = new Font("Segoe UI", 16),
                 ForeColor = Color.FromArgb(230, 230, 230),
                 Location = new Point(15, 105),
                 AutoSize = true
@@ -168,7 +167,21 @@ namespace ITBS_Platform.Controls.Formateur
             btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(55, 55, 70);
             return btn;
         }
+        private void NaviguerVers(UserControl nouvelleVue)
+        {
+            // Trouver le MainForm parent
+            MainForm? mainForm = this.FindForm() as MainForm;
 
+            if (mainForm != null)
+            {
+                mainForm.NaviguerVers(nouvelleVue);
+            }
+            else
+            {
+                MessageBox.Show("Erreur : Impossible de trouver le formulaire principal", "Erreur",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private Panel CreerCarteFormation(string titre, string etudiants, string statut, int x, int y)
         {
             Panel card = new Panel

@@ -1,6 +1,6 @@
-namespace ITBS_Platform.Controls.Admin
+namespace ITBS_Platform.Controls.Formateur
 {
-    partial class AdminDashboardControl
+    partial class ModifierFormation
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.
@@ -28,17 +28,8 @@ namespace ITBS_Platform.Controls.Admin
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // AdminDashboardControl
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.Name = "AdminDashboardControl";
-            this.Size = new System.Drawing.Size(1200, 800);
-            this.ResumeLayout(false);
-
         }
 
         #endregion

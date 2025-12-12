@@ -1,6 +1,6 @@
-﻿namespace ITBS_Platform
+namespace ITBS_Platform.Controls.Admin
 {
-    partial class MainForm
+    partial class AttestationsControl
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -16,9 +16,10 @@
         private void InitializeComponent()
         {
             this.SuspendLayout();
-            this.ClientSize = new Size(1200, 900);
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.Text = "ITBS Platform";
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "AttestationsControl";
+            this.Size = new System.Drawing.Size(1400, 700);
             this.ResumeLayout(false);
         }
     }

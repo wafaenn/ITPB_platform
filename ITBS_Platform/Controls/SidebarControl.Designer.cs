@@ -1,6 +1,6 @@
-namespace ITBS_Platform.Controls.Admin
+namespace ITBS_Platform.Controls
 {
-    partial class AdminDashboardControl
+    partial class SidebarControl
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.
@@ -30,13 +30,13 @@ namespace ITBS_Platform.Controls.Admin
         {
             this.SuspendLayout();
             // 
-            // AdminDashboardControl
+            // SidebarControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.Name = "AdminDashboardControl";
-            this.Size = new System.Drawing.Size(1200, 800);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.Name = "SidebarControl";
+            this.Size = new System.Drawing.Size(240, 800);
             this.ResumeLayout(false);
 
         }

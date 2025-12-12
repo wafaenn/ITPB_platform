@@ -28,7 +28,7 @@ namespace ITBS_Platform.Services
         }
 
         // READ BY ID
-        public async Task<User> GetUser(int id)
+        public async Task<User?> GetUser(int id)
         {
             return await _context.Users.FindAsync(id);
         }

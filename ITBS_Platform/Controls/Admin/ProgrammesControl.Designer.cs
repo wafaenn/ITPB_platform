@@ -1,6 +1,6 @@
-﻿namespace ITBS_Platform
+namespace ITBS_Platform.Controls.Admin
 {
-    partial class MainForm
+    partial class ProgrammesControl
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -16,9 +16,10 @@
         private void InitializeComponent()
         {
             this.SuspendLayout();
-            this.ClientSize = new Size(1200, 900);
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.Text = "ITBS Platform";
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "ProgrammesControl";
+            this.Size = new System.Drawing.Size(1600, 800);
             this.ResumeLayout(false);
         }
     }

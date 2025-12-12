@@ -24,7 +24,7 @@ namespace ITBS_Platform.Controls.Etudiant
                 Text = "Tableau de bord Étudiant",
                 ForeColor = Color.White,
                 Font = new Font("Segoe UI", 28, FontStyle.Bold),
-                Location = new Point(40, 30),
+                Location = new Point(320, 30),
                 AutoSize = true
             };
             this.Controls.Add(titre);
@@ -36,37 +36,37 @@ namespace ITBS_Platform.Controls.Etudiant
             int cardHeight = 140;
 
             // Carte 1 : Formations inscrites
-            Panel card1 = CreerCarte("Mes Inscriptions", "7", "📚", Color.FromArgb(100, 88, 255), 40, cardY, cardWidth, cardHeight);
+            Panel card1 = CreerCarte("Mes Inscriptions", "7", "📚", Color.FromArgb(100, 88, 255), 250, cardY, cardWidth, cardHeight);
             this.Controls.Add(card1);
 
             // Carte 2 : Formations en cours
-            Panel card2 = CreerCarte("En cours", "3", "🎯", Color.FromArgb(52, 199, 89), 40 + cardWidth + cardSpacing, cardY, cardWidth, cardHeight);
+            Panel card2 = CreerCarte("En cours", "3", "🎯", Color.FromArgb(52, 199, 89), 340 + cardWidth + cardSpacing, cardY, cardWidth, cardHeight);
             this.Controls.Add(card2);
 
             // Carte 3 : Formations terminées
-            Panel card3 = CreerCarte("Terminées", "4", "✅", Color.FromArgb(255, 149, 0), 40 + (cardWidth + cardSpacing) * 2, cardY, cardWidth, cardHeight);
+            Panel card3 = CreerCarte("Terminées", "4", "✅", Color.FromArgb(255, 149, 0), 440 + (cardWidth + cardSpacing) * 2, cardY, cardWidth, cardHeight);
             this.Controls.Add(card3);
 
             // ========== ACTIONS RAPIDES ==========
             Label lblActions = new Label
             {
                 Text = "Actions rapides",
-                ForeColor = Color.White,
+                ForeColor = Color.Lavender,
                 Font = new Font("Segoe UI", 20, FontStyle.Bold),
-                Location = new Point(40, 270),
+                Location = new Point(280, 270),
                 AutoSize = true
             };
             this.Controls.Add(lblActions);
 
-            Button btnExplorerFormations = CreerBoutonAction("🔍 Explorer les formations", 40, 320);
+            Button btnExplorerFormations = CreerBoutonAction("🔍 Explorer les formations", 240, 320);
             btnExplorerFormations.Click += (s, e) => MessageBox.Show("Redirection vers catalogue formations");
             this.Controls.Add(btnExplorerFormations);
 
-            Button btnMesInscriptions = CreerBoutonAction("📋 Mes inscriptions", 380, 320);
+            Button btnMesInscriptions = CreerBoutonAction("📋 Mes inscriptions", 580, 320);
             btnMesInscriptions.Click += (s, e) => MessageBox.Show("Redirection vers mes inscriptions");
             this.Controls.Add(btnMesInscriptions);
 
-            Button btnCertificats = CreerBoutonAction("🎓 Mes certificats", 720, 320);
+            Button btnCertificats = CreerBoutonAction("🎓 Mes certificats", 920, 320);
             btnCertificats.Click += (s, e) => MessageBox.Show("Redirection vers certificats");
             this.Controls.Add(btnCertificats);
 
@@ -76,15 +76,15 @@ namespace ITBS_Platform.Controls.Etudiant
                 Text = "Mes formations",
                 ForeColor = Color.White,
                 Font = new Font("Segoe UI", 20, FontStyle.Bold),
-                Location = new Point(40, 420),
+                Location = new Point(300, 420),
                 AutoSize = true
             };
             this.Controls.Add(lblFormations);
 
             Panel panelFormations = new Panel
             {
-                Location = new Point(40, 470),
-                Size = new Size(1000, 250),
+                Location = new Point(300, 470),
+                Size = new Size(1400, 250),
                 BackColor = Color.FromArgb(28, 28, 42),
                 AutoScroll = true
             };
@@ -120,7 +120,7 @@ namespace ITBS_Platform.Controls.Etudiant
             Label lblEmoji = new Label
             {
                 Text = emoji,
-                Font = new Font("Segoe UI", 32),
+                Font = new Font("Segoe UI", 26),
                 ForeColor = Color.White,
                 Location = new Point(15, 15),
                 AutoSize = true
@@ -132,7 +132,7 @@ namespace ITBS_Platform.Controls.Etudiant
                 Text = valeur,
                 Font = new Font("Segoe UI", 32, FontStyle.Bold),
                 ForeColor = Color.White,
-                Location = new Point(15, 60),
+                Location = new Point(190, 15),
                 AutoSize = true
             };
             carte.Controls.Add(lblValeur);
