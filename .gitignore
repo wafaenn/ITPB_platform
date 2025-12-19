@@ -1,4 +1,4 @@
-# ---------- Visual Studio / .NET ----------
+
 .vs/
 [Bb]in/
 [Oo]bj/
@@ -17,7 +17,7 @@
 Debug/
 Release/
 
-# ---------- Node / Front-end (React/Angular/Vue) ----------
+
 node_modules/
 dist/
 build/
@@ -31,13 +31,13 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# ---------- OS ----------
+
 .DS_Store
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 
-# ---------- Secrets (optionnel mais conseillé) ----------
+
 **/appsettings.*.json
 !**/appsettings.json
 !.gitignore
