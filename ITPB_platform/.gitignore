@@ -1,0 +1,9 @@
+bin/
+obj/
+.vs/
+*.user
+*.log
+packages/
+#fichiers windows
+Thumbs.db
+Desktop.ini
